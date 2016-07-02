@@ -1,0 +1,32 @@
+<template name="login">
+<body class="hold-transition login-page">
+<div id="login-box">
+  
+  <div class="login-box-body">
+  <div class="login-logo">
+
+    <img src="{{ pathFor 'home' }}images/logo.png">
+  </div>
+
+    <div class="social-auth-links text-center">
+
+        {{> atForm }}
+
+        <div class="row margin">
+       <a href="#" class="btn btn-block btn-social btn-twitter btn-flat tw-login"><i class="fa fa-facebook"></i> Iniciar Sesión con Facebook</a>
+       </div>
+
+    <div class="row margin">
+    <span>
+    Al registrarte estarás aceptando los 
+    <a href="http://google.com" target="_blank" style="color: white;">Terminos y condiciones</a>
+    </span>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</template>

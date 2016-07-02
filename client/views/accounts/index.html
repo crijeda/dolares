@@ -1,0 +1,52 @@
+<template name="accountsIndex">
+  <h1 class="page-title">
+    Mis Cuentas
+  </h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Alias
+        </th>
+        <th>
+          Banco
+        </th>
+        <th>
+          Numero
+        </th>
+        <th>
+          Editar
+        </th>
+        <th>
+          Eliminar
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# each accounts }}
+        <tr>
+          <td>
+            {{ alias }}
+          </td>
+          <td>
+            {{ bank }}
+          </td>
+          <td>
+            {{ number }}
+          </td>
+          <td>
+            <a href="{{ pathFor 'accounts.update' accountId=_id }}">Editar</a>
+          </td>
+          <td>
+            <a href="{{ pathFor 'accounts.remove' accountId=_id }}">Eliminar</a>
+          </td>
+        </tr>
+      {{/ each }}
+    </tbody>
+  </table>
+  <br>
+  <a href="{{ pathFor 'accounts.create' }}" class="btn confirm-btn pull-right"><i class="material-icons">+ AGREGAR</i></a>
+   <a href="" class="btn pass-btn pull-left"><i class="material-icons">+ Reset Email</i></a>
+
+</template>

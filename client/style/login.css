@@ -1,0 +1,112 @@
+
+html,body.login-page{
+  background: url(images/background_login.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.login-page p,h1,h2,h3,h4,a,span,label{
+  color:white;
+}
+
+/*label[for=at-field-email] span{
+  display: none;
+}
+
+label[for=at-field-email]:after {
+  content: 'Testeo';
+  color:white;
+}*/
+.margin{
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.tw-login{
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+
+}
+.tw-login:hover{ 
+    background-color: #0097e2;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+
+}
+.insta-login{
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+}
+
+.login{
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    color: white;
+}
+
+
+.login-box-body {
+	background-color: rgba(0, 0, 0, 0.85);
+  padding: 10%;
+}
+
+.login-logo{
+  height: 80px;
+  opacity: 1;
+  text-align: center;
+}
+.login-logo img{
+  height: 80px;
+  opacity: 1;
+  text-align: center;
+}
+
+#at-btn{
+   font-size: 17px;
+   background-color: rgba(28, 161, 223, 1);
+   color: white;
+   margin-top: 20px;
+}
+
+#at-field-email{
+width: 100%;
+height: 35px;
+text-align: center;
+font-size: 18px;
+}
+
+#at-field-password{
+width: 100%;
+height: 35px;
+text-align: center;
+font-size: 18px;
+}
+
+#at-field-password_again{
+width: 100%;
+height: 35px;
+text-align: center;
+font-size: 18px;
+}
+
+#login-box {
+     padding:5% 30% 30% 30%;
+}
+
+@media (max-width: 990px) {
+    #login-box {       
+         padding:0%;
+
+    }
+    .login-box-body {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10%;
+}
+}

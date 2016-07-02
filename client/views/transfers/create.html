@@ -1,0 +1,81 @@
+<template name="transfersCreate">
+  <h1 class="page-title">Cambiar Dólares por Pesos</h1>
+
+  <div class="downtitle">
+    <div class="col-md-4 transbox">
+    <div>
+      <p class="headp">
+        
+          SELECCIONA UNA TARJETA
+        
+      </p>
+    </div>
+      {{# each cards }}
+        <p class="inboxp">
+          <input name="card" type="radio" id="card-radio-{{ _id }}" value="{{ _id }}" />
+          <label for="card-radio-{{ _id }}"><img src="{{ pathFor 'home' }}images/{{ upper brand }}.png" class="imgcard"><b> ...{{ last4 }}</b></label>
+        </p>
+      {{/ each }}
+    </div>
+    <div class="col-md-4 transbox">
+      <p class="headp">
+        
+          ELIGE EL MONTO
+        
+      </p>
+
+      <p class="inboxp">
+        <b>$1</b> Dolar = <b>${{ dolarPrice }}</b> Pesos
+      </p>
+
+      <div class="row change">
+        
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="text" class="form-control" name="change-dolar" placeholder="Dolares">
+            <div class="input-group-addon">USD</div>
+          </div>
+        </div>
+
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control" name="change-peso" placeholder="Pesos">
+          <div class="input-group-addon">CLP</div>
+        </div>
+      </div>
+      <!-- <button type="submit" class="btn btn-primary">Transfer cash</button>   -->  
+        </div>
+      </div>
+   
+    <div class="col-md-4 transbox">
+      <p class="headp">
+        
+          SELECCIONA UNA CUENTA
+       
+      </p>
+
+      {{# each accounts }}
+        <p class="inboxp">
+          <input name="account" type="radio" id="account-radio-{{ _id }}" value="{{ _id }}" />
+          <label for="account-radio-{{ _id }}">{{ upper alias }}</label>
+        </p>
+      {{/ each }}
+    </div>
+  </div>
+
+  {{# if transfer }}
+    <div class="progress">
+      <div class="{{# if progress }}determinate{{ else }}indeterminate{{/ if }}" style="width: 70%"></div>
+    </div>
+  {{ else }}
+    <div class="confirm">
+      <p class="center-align">
+        <a href="#" class="confirm-btn btn btn-primary">CONFIRMAR</a>
+      </p>
+    </div>
+  {{/ if }}
+</template>

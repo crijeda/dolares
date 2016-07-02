@@ -1,0 +1,9 @@
+<template name="accountsCreate">
+  <div class="row">
+    <div class="col m8 offset-m2">
+      <h1 class="page-title">Agregar una cuenta</h1>
+      <a href="{{ pathFor 'accounts.index' }}">Atrás</a>
+      {{> quickForm collection="Accounts" id="accountsCreateForm" type="insert" }}
+    </div>
+  </div>
+</template>

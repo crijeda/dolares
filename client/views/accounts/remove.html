@@ -1,0 +1,12 @@
+<template name="accountsRemove">
+  <h1 class="page-title">Borrar Cuenta <small>{{ account.alias }}</small></h1>
+
+  <p>
+    ¿Estas seguro de que quieres borrar esta cuenta?
+  </p>
+
+  <p>
+    <a href="{{ pathFor 'accounts.index' }}" class="btn btn-default">Cancelar</a>
+    <a href="#" class="delete-btn btn btn-danger">Borrar</a>
+  </p>
+</template>

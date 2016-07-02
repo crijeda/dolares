@@ -1,0 +1,14 @@
+.cards-form form{
+    text-align: center;
+    margin-top: 30px;
+    background: rgba(51, 51, 51, 0.8);
+    padding-top: 20px;
+}
+
+.inputcredit{
+	padding-top: 10px;
+}
+
+.formcredit{
+	padding: 0 35% 0 35%;
+}

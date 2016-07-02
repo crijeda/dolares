@@ -1,0 +1,19 @@
+<template name="layout">
+{{# if currentUser }}
+  {{> header }}
+  <main>
+    <div class="site">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">      
+              {{> Template.dynamic template=content }}       
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {{> footer }}
+  {{ else }}
+    {{> login }}
+  {{/ if }}
+</template>

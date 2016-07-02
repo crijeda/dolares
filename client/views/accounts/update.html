@@ -1,0 +1,10 @@
+<template name="accountsUpdate">
+  <div class="row">
+    <div class="col m8 offset-m2">
+      <h1 class="page-title">Editar Cuenta <small>{{ account.alias }}</small></h1>
+
+      <a href="{{ pathFor 'accounts.index' }}">Atrás</a>
+      {{> quickForm collection="Accounts" doc=account id="accountsUpdateForm" type="update" }}
+    </div>
+  </div>
+</template>

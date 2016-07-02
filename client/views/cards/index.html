@@ -1,0 +1,38 @@
+<template name="cardsIndex">
+  <h1 class="page-title">Mis Tarjetas de Crédito</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Tipo
+        </th>
+        <th>
+          Últimos 4 dígitos
+        </th>
+        <th>
+          Eliminar
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# each cards }}
+        <tr>
+          <td>
+            {{ brand }}
+          </td>
+          <td>
+            {{ last4 }}
+          </td>
+          <td>
+            <a href="{{ pathFor 'cards.remove' cardId=_id }}">Eliminar</a>
+          </td>
+        </tr>
+      {{/ each }}
+    </tbody>
+  </table>
+
+
+  <br>
+  <a href="{{ pathFor 'cards.create' }}" class="btn confirm-btn pull-right"><i class="material-icons">+ AGREGAR</i></a>
+</template>

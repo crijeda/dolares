@@ -1,0 +1,12 @@
+<template name="cardsRemove">
+  <h1 class="page-title">Borrar Tarjeta <small>{{ card.last4 }}</small></h1>
+
+  <p>
+    ¿Estas seguro de que quieres borrar esta cuenta?
+  </p>
+
+  <p>
+    <a href="{{ pathFor 'cards.index' }}" class="btn btn-default">Cancelar</a>
+    <a href="#" class="delete-btn btn btn-danger">Borrar</a>
+  </p>
+</template>
